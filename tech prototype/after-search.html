@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display coffee shops</title>
+    <style>
+        .container{
+            width: 1000px;
+        }
+        .container .header{
+            height: 100px;
+            background-image: url("images/headerback.jpg");
+        }
+        .container .header .options{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            float: right;
+        }
+        .result img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .result span{
+            height: 40px;
+            width: 70px;
+            text-align: center;
+        }
+
+        .result div{
+            display: inline;
+        }
+        .body .show-results{
+            width: 400px;
+        }
+        .body div{
+            float: left;
+        }
+
+        .search-options{
+            width: 300px;
+        }
+        .show-results ul li {
+            display: block;
+        }
+        .search-options div{
+            margin: 30px;
+        }
+        .search-options .search-fav{
+            width: 80px;
+            height: 80px;
+            margin-left: 70px;
+        }
+        #btn-pop-up{
+            cursor:pointer;
+        }
+        #pop-up {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+
+        .content{
+            width: 30%;
+            font-family: Verdana;
+            font-weight: bold;
+            background-color: lightgray;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* The Close Button */
+
+     #btn-confirm, #btn-cancel{
+         text-align: center;
+         background-color: dodgerblue;
+         height:30px;
+         width:100px;
+
+     }
+     #btn-confirm:hover, #btn-cancel:hover{
+         background-color: darkgray;
+         cursor: pointer;
+     }
+     #btn-confirm a, #btn-cancel a {
+         text-underline: none;
+         text-decoration: none;
+         color:white;
+     }
+
+        .content{
+            width: 30%;
+            font-family: Verdana;
+            font-weight: bold;
+            background-color: khaki;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .content input {
+            height: 20px;
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <a href="my-profile.html"><img class="options" src="images/profile.png"></a>
+        <a href="my-profile.html"><img class="options" src="images/settings.png"></a>
+    </div>
+
+    <div class="body">
+        <div class="search-options">
+            <div class="search-by-name">
+                <input type="text" placeholder="Search coffe name">
+            </div>
+            <a href="favourites.html"><img class="search-fav" src="images/fav.png"></a><br><br>
+            <a href="home.html"><img class="search-fav" src="images/home.png"></a><br><br>
+            <img class='search-fav' id="btn-pop-up" src="images/adjust.png"></button><br>
+        </div>
+
+        <div class="show-results">
+            <h2>Results from search</h2>
+            <ul>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 1 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 2 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 3 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 4 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 5 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="pop-up">
+
+    <div class="content">
+        <span>Enter distance between 0 and 1 km.</span><br><br>
+        <input id='number'type="text" placeholder="Enter text"><br><br>
+        <button id="btn-confirm"><a href="after-search.html">Confirm</a></button>
+        <button id="btn-cancel"><a href="after-search.html">Cancel</a></button>
+
+    </div>
+
+</div>
+<script>
+    var btn = document.getElementById('btn-pop-up');
+    var pop_up = document.getElementById('pop-up');
+    var confirm_btn = document.getElementById('btn-confirm');
+    var cancel_btn = document.getElementById('btn-cancel');
+    btn.onclick = function (){
+        pop_up.style.display = "block";
+    }
+    confirm_btn.onclick = function (){
+        var getinput = document.getElementById('number');
+        ///alert tuka ako e prazno
+        pop_up.style.display = 'none';
+    }
+    cancel_btn.onclick = function (){
+        pop_up.style.display = 'none';
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
