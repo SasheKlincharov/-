@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Favourites";
+}
+
+<table>
+    <tr>
+        <td>
+
+            <div class="jumbotron">
+
+                <div class="container">
+                    <input type="text" name="search box" class="searchBox" placeholder="Search" />
+                    <a href="~/Home/Index"><img src="~/Img/Home-512.png" /><span>home</span></a><br /><br />
+                    <a href="~/Home/Adjust"><img src="~/images/adjust.png" /><span>adjust</span></a>
+                </div>
+            </div>
+        </td>
+
+
+        <td>
+            <ul>
+                <li>data</li>
+                <li>data</li>
+
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+
+
+            </ul>
+        </td>
+
+
+    </tr>
+</table>
+
+@section Styles {
+    <link href="@Url.Content("~/Scripts/sortedStyle.css")" rel="stylesheet" type="text/css" />
+}
+
+@section Scripts{
+    <script>
+        var search = $(".searchBox");
+
+    </script>    
+}
