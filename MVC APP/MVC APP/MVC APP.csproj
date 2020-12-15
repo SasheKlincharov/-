@@ -236,9 +236,28 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Img\1-04-512.png" />
+    <Content Include="Img\122646-200.png" />
+    <Content Include="Img\171-512.png" />
+    <Content Include="Img\585e4ad1cb11b227491c3391.png" />
+    <Content Include="Img\95-512.png" />
+    <Content Include="Img\adjust-icon.png" />
+    <Content Include="Img\b36ff86fd6a8561d0f67216c947a4c08.png" />
+    <Content Include="Img\email-icon.png" />
+    <Content Include="Img\Home-512.png" />
+    <Content Include="Img\key-pass.png" />
+    <Content Include="Img\Location-Color-34-512.png" />
+    <Content Include="Img\myacc.png" />
+    <Content Include="Img\settings-gear-mechanics-preferences-option-config-configuration-23369.png" />
+    <Content Include="Img\settings-icon.png" />
+    <Content Include="Img\unnamed.jpg" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\favouritesStyle.css" />
+    <Content Include="Scripts\homepage.css" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -249,6 +268,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\registerStyle.css" />
+    <Content Include="Scripts\sortedStyle.css" />
+    <Content Include="Scripts\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -291,6 +313,8 @@
     <Content Include="Views\Account\AlredyInFavourites.cshtml" />
     <Content Include="Views\Account\AddToFavourites.cshtml" />
     <Content Include="Views\Account\FavouriteBars.cshtml" />
+    <Content Include="Views\Home\Favourites.cshtml" />
+    <Content Include="Views\Home\Alphabetical.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
