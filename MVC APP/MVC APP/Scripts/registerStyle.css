@@ -1,0 +1,75 @@
+﻿body {
+    background-color: #ebe7db;
+}
+
+.email {
+    position: relative;
+    display: flex;
+}
+
+.boxes {
+    position: relative;
+    left: 40px;
+}
+
+.pass {
+    position: relative;
+    display: flex;
+}
+
+.signup {
+    position: relative;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    top: 20px;
+    right: 70px;
+    background: linear-gradient(lightgreen, forestgreen);
+}
+.loginBtn {
+    position: relative;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(lightgreen, forestgreen);
+}
+
+
+.signupFooter {
+    position: relative;
+    top: 50px;
+}
+
+.signupHeader{
+    position: relative;
+    left: 50px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.body-content {
+    position: relative;
+    left: 350px;
+}
+
+footer {
+    position: relative;
+    top: 200px;
+}
+
+.checkbox {
+    position: relative;
+    right: 100px;
+}
+
+.loginHeader{
+    position: relative;
+    left: 100px;
+}
+.loginFooter {
+    position: relative;
+    right: 10px;
+    top: 50px;
+}

@@ -10,6 +10,7 @@ using MVC_APP.Models;
 
 namespace MVC_APP.Controllers
 {
+    [Authorize]
     public class CoffeBarController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -137,7 +138,13 @@ namespace MVC_APP.Controllers
                 return String.Compare(a.Name, b.Name);
             }
         }
-
+        public class DistanceComparer : IComparer<CoffeeBar>
+        {
+            public int Compare(CoffeeBar a, CoffeeBar b)
+            {
+                return a.Distance.CompareTo(b.Distance);
+            }
+        }
         public class RatingComparer : IComparer<CoffeeBar>
         {
             public int Compare(CoffeeBar a, CoffeeBar b)
@@ -155,6 +162,35 @@ namespace MVC_APP.Controllers
             return View("Index", all_bars);
         }
 
+        public ActionResult SearchByName(String id)
+        {
+            List<CoffeeBar> all_bars = new List<CoffeeBar>();
+
+            foreach(var b in db.Bars)
+            {
+                if (b.Name.Equals(id))
+                    all_bars.Add(b);
+            }
+
+            return View("Index", all_bars);
+        }
+
+        public ActionResult SearchByDistance(int ?id)
+        {
+            if (id == null)
+                id = 0;
+
+            List<CoffeeBar> all_bars = new List<CoffeeBar>();
+
+            foreach (var b in db.Bars)
+            {
+                if (b.Distance <= (float)id)
+                    all_bars.Add(b);
+            }
+
+            return View("Index", all_bars);
+        }
+
         public ActionResult RatingSort()
         {
             List<CoffeeBar> all_bars = db.Bars.ToList();
@@ -165,6 +201,15 @@ namespace MVC_APP.Controllers
             return View("Index",all_bars);
         }
 
+        public ActionResult DistanceSort()
+        {
+            List<CoffeeBar> all_bars = db.Bars.ToList();
+            DistanceComparer comparer = new DistanceComparer();
+
+            all_bars.Sort(comparer);
+
+            return View("Index", all_bars);
+        }
 
         // POST: CoffeBar/Delete/5
         [HttpPost, ActionName("Delete")]

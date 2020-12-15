@@ -4,61 +4,85 @@
     ViewBag.Title = "Index";
 }
 
-<h2>All coffee bars:</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Distance)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WebPage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
+<table>
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Distance)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WebPage)
-        </td>
-        <td>
-            <img style="width:300px;height:130px;" src="@item.ImageUrl" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
-            <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@item.Id">Favourite</a></button>
+            <div class="jumbotron">
+                <div class="container">
+                   
+         <a class="searchHome" style="cursor:pointer"><img src="~/images/search.png" /><span>adjust</span></a><br /><br />
+        <a href="~/Home/Index"><img src="~/Img/Home-512.png" /><span>home</span></a><br /><br />
+        <a class="searchAdjust" style="cursor:pointer"><img src="~/images/adjust.png" /><span>adjust</span></a>
+                </div>
+            </div>
         </td>
     </tr>
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            <ul style="margin-top:-450px;">
+                @{
+                    if (User.IsInRole("Admin"))
+                    {
+                    <h3>@Html.ActionLink("Create New", "Create")</h3>
+                    }
+                    foreach (var b in Model)
+                    {
+            <li>
+                <img src="@b.ImageUrl" />
+                <a style="color:black;font-size:25px" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
+                <h3>Rating: @b.Rating</h3>
+                <h3>Distance(to center): @b.Distance m</h3>
+                <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@b.Id">Favourite</a></button>
+
+                <br /><br />
+                @{
+                    if (User.IsInRole("Admin"))
+                    {
+                        @Html.ActionLink(" Edit", "Edit", new { id = b.Id })
+                        @Html.ActionLink("  Delete", "Delete", new { id = b.Id })
+                    }
+                }
+
+            </li>
+                        <hr />
+
+                    }
+                }
+
+
+
+            </ul>
+        </td>
+
+
+    </tr>
+</table>
+
+@section Styles {
+    <link href="@Url.Content("~/Scripts/sortedStyle.css")" rel="stylesheet" type="text/css" />
 }
 
-</table>
+@section Scripts{
+    <script>
+        var search = $(".searchHome");
+        search.click(function () {
+            bootbox.prompt("Search",
+                function (result) {
+                    window.location.href = '@Url.Action("SearchByName", "CoffeBar")/' + result;
+                });
+
+        });
+
+        var search = $(".searchAdjust");
+        search.click(function () {
+            bootbox.prompt("Enter distance",
+                function (result) {
+                    window.location.href = '@Url.Action("SearchByDistance", "CoffeBar")/' + result;
+                });
+
+        });
+    </script>
+}

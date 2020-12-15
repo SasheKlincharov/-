@@ -1,30 +1,54 @@
-﻿@model MVC_APP.Models.ApplicationUser
+﻿
+
+@model MVC_APP.Models.ApplicationUser
 
 @{
-    ViewBag.Title = "FavouriteBars";
+    ViewBag.Title = "Favourites";
 }
 
-<h2>User Favourites:</h2>
-
-<p>Da se napravi izgledot treba kako u mokapot voa dole e za test</p>
-
 <table>
-    <thead>
-        <tr>
-            <td style="font-size:18px">
-                Coffee Bar:
-            </td>
-            <td>
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var g in Model.FavouriteBars)
-        {
-            <tr>
-                <td><a style="color:white;font-size:25px" href="~/CoffeBar/Details/@g.Id">@g.Name</a></td>
-                <td><button data-id="@g.Id" class="btn btn-danger">Remove from favourites</button></td>
+    <tr>
+        <td>
+
+            <div class="jumbotron">
+
+                <div class="container">
+                    <a href="~/Home/Index"><img src="~/Img/Home-512.png" /><span>home</span></a><br /><br />
+                </div>
+            </div>
+        </td>
+
+
+        <td>
+            <h3>Favourite bars:</h3>
+            <ul>
+                @{
+                    foreach (var b in Model.FavouriteBars)
+                    {
+                        <li>
+                            <a style="color:black;font-size:25px" href="~/CoffeBar/Details/@b.Id">@b.Name</a>
+
+                            <button data-id="@b.Id" class="btn btn-danger">Remove from favourites</button>
+                        </li>
+                    }
+                }
+
+
+
+            </ul>
+        </td>
+
+
             </tr>
-        }
-    </tbody>
 </table>
+
+@section Styles {
+    <link href="@Url.Content("~/Scripts/sortedStyle.css")" rel="stylesheet" type="text/css" />
+}
+
+@section Scripts{
+    <script>
+        var search = $(".searchBox");
+
+    </script>
+}

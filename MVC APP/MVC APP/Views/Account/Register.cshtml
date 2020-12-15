@@ -1,55 +1,66 @@
 ﻿@model MVC_APP.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Create an account";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2 class="signupHeader">Create an account</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Register</h4>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Surname, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Surname, new { @class = "form-control" })
-        </div>
-    </div>
-   
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-
+    <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group name">
+        <div class="col-md-10" style="position: absolute">
+            <img src="~/Img/myacc.png" style="max-width: 30px; " />
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { placeholder = "Name", @class = "form-control boxes" })
+        </div>
+    </div>
+    <div class="form-group name">
+        <div class="col-md-10" style="position: absolute">
+            <img src="~/Img/myacc.png" style="max-width: 30px; " />
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Surname, new { placeholder = "Surname", @class = "form-control boxes" })
+        </div>
+    </div>
+    <div class="form-group email">
+        <div class="col-md-10" style="position: absolute">
+            <img src="~/Img/email-icon.png" style="max-width: 30px; " />
+        </div>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { placeholder = "E-mail", @class = "form-control boxes" })
+        </div>
+    </div>
+    <div class="form-group pass">
+        <div class="col-md-10" style="position: absolute">
+            <img src="~/Img/key-pass.png" style="max-width: 30px" />
+        </div>
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control boxes" })
+        </div>
+    </div>
+    <div class="form-group pass">
+        <div class="col-md-10" style="position: absolute">
+            <img src="~/Img/key-pass.png" style="max-width: 30px" />
+        </div>
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = "Confirm password", @class = "form-control boxes" })
+        </div>
+    </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+            <input type="submit" class="btn signup" value="Sign up" />
         </div>
     </div>
+    <h5 class="signupFooter">Have an account? <a href="~/Account/Login">Log in.</a> Or, <a href="~/Home/Index">continue</a> without an account.</h5>
 }
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+}
+@section Styles {
+    <link href="@Url.Content("~/Scripts/registerStyle.css")" rel="stylesheet" type="text/css" />
 }
