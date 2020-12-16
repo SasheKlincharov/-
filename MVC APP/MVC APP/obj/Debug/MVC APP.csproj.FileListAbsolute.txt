@@ -426,3 +426,11 @@ C:\Users\Pc\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP
 C:\Users\Pc\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodelaccview.resources
 C:\Users\Pc\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodels2.resources
 C:\Users\Pc\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.promena.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.test2.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.addedCoffeController.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.added_view_alphabetical.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.otherViews.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.views_and_coffeBarsListMethods.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodelaccview.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodels2.resources
+C:\Users\Ivona\Documents\GitHub\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.promena.resources
