@@ -9,10 +9,16 @@
         <td>
             <div class="jumbotron">
                 <div class="container">
-                   
-         <a class="searchHome" style="cursor:pointer"><img src="~/images/search.png" /><span>search</span></a><br /><br />
-        <a href="~/Home/Index"><img src="~/Img/Home-512.png" /><span>home</span></a><br /><br />
-        <a class="searchAdjust" style="cursor:pointer"><img src="~/images/adjust.png" /><span>adjust</span></a>
+                    @if (!Model.ElementAt(0).Name.Equals("SEARCH NAME RESULT"))
+                    {
+                        <a class="searchHome" style="cursor:pointer"><img src="~/images/search.png" /><span>search</span></a><br /><br />
+                    }
+                    <a href="~/Home/Index"><img src="~/Img/Home-512.png" /><span>home</span></a><br /><br />
+                    @if (!Model.ElementAt(0).Name.Equals("SEARCH DISTANCE RESULT"))
+                    {
+                        <a class="searchAdjust" style="cursor:pointer"><img src="~/images/adjust.png" /><span>adjust</span></a>
+                    }
+
                 </div>
             </div>
         </td>
@@ -26,27 +32,31 @@
                 @{
                     if (User.IsInRole("Admin"))
                     {
-                    <h3>@Html.ActionLink("Create New", "Create")</h3>
+                        <h3>@Html.ActionLink("Create New", "Create")</h3>
                     }
                     foreach (var b in Model)
                     {
-            <li>
-                <img src="@b.ImageUrl" />
-                <a style="color:black;font-size:25px" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
-                <h3>Rating: @b.Rating⭐ out of 5⭐</h3>
-                <h3>Distance(to center): @b.Distance m</h3>
-                <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@b.Id">Favourite</a></button>
 
-                <br /><br />
-                @{
-                    if (User.IsInRole("Admin"))
-                    {
-                        @Html.ActionLink(" Edit", "Edit", new { id = b.Id })
-                        @Html.ActionLink("  Delete", "Delete", new { id = b.Id })
-                    }
-                }
+                        if (!b.Name.Equals("SEARCH DISTANCE RESULT") && !b.Name.Equals("SEARCH NAME RESULT"))
+                        {
 
-            </li>
+                            <li>
+                                <img src="@b.ImageUrl" />
+                                <a style="color:black;font-size:25px" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
+                                <h3>Rating: @b.Rating⭐ out of 5⭐</h3>
+                                <h3>Distance(to center): @b.Distance m</h3>
+                                <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@b.Id">Favourite</a></button>
+                                <br /><br />
+                                @{
+                                    if (User.IsInRole("Admin"))
+                                    {
+                                        @Html.ActionLink(" Edit", "Edit", new { id = b.Id })
+                                        @Html.ActionLink("  Delete", "Delete", new { id = b.Id })
+                                    }
+                                }
+                            </li>
+
+                        }
                         <hr />
 
                     }
@@ -69,11 +79,10 @@
     <script>
         var search = $(".searchHome");
         search.click(function () {
-            bootbox.prompt("Search",
+            bootbox.prompt("Search by name",
                 function (result) {
                     window.location.href = '@Url.Action("SearchByName", "CoffeBar")/' + result;
                 });
-
         });
 
         var search = $(".searchAdjust");

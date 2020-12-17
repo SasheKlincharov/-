@@ -165,23 +165,32 @@ namespace MVC_APP.Controllers
         public ActionResult SearchByName(String id)
         {
             List<CoffeeBar> all_bars = new List<CoffeeBar>();
+            
+            CoffeeBar for_flag = new CoffeeBar();
+            for_flag.Name = "SEARCH NAME RESULT";
+
+            all_bars.Add(for_flag);
 
             foreach(var b in db.Bars)
             {
-                if (b.Name.Equals(id))
+                if (b.Name.ToLower().Equals(id.ToLower()))
                     all_bars.Add(b);
             }
 
             return View("Index", all_bars);
         }
 
+      
         public ActionResult SearchByDistance(int ?id)
         {
             if (id == null)
                 id = 0;
 
             List<CoffeeBar> all_bars = new List<CoffeeBar>();
+            CoffeeBar for_flag = new CoffeeBar();
+            for_flag.Name = "SEARCH DISTANCE RESULT";
 
+            all_bars.Add(for_flag);
             foreach (var b in db.Bars)
             {
                 if (b.Distance <= (float)id)
