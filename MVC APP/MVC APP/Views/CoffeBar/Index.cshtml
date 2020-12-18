@@ -40,11 +40,11 @@
                         if (!b.Name.Equals("SEARCH DISTANCE RESULT") && !b.Name.Equals("SEARCH NAME RESULT"))
                         {
 
-                            <li>
+                            <li style="display:flex; align-items:center">
                                 <img src="@b.ImageUrl" />
-                                <a style="color:black;font-size:25px" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
-                                <h3>Rating: @b.Rating⭐ out of 5⭐</h3>
-                                <h3>Distance(to center): @b.Distance m</h3>
+                                <a style="color:black;font-size:25px;margin:30px;" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
+                                <h3 style="margin:30px">Rating: @b.Rating⭐ out of 5⭐</h3>
+                                <h3 style="margin:30px">Distance(to center): @b.Distance m</h3>
                                 <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@b.Id">Favourite</a></button>
                                 <br /><br />
                                 @{

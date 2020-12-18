@@ -475,3 +475,73 @@ C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\bin\r
 C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\bin\roslyn\vbc.rsp
 C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\bin\roslyn\VBCSCompiler.exe
 C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\MVC APP.dll.config
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\MVC APP.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\MVC APP.pdb
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Antlr3.Runtime.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\EntityFramework.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\EntityFramework.SqlServer.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Newtonsoft.Json.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Owin.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Helpers.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Mvc.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Optimization.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Razor.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.WebPages.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\WebGrease.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\EntityFramework.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\EntityFramework.SqlServer.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Helpers.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Mvc.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Optimization.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.Razor.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.WebPages.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Newtonsoft.Json.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Antlr3.Runtime.pdb
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC APP.csprojAssemblyReference.cache
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.initial.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.coffeebars.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.test1.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.test2.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.addedCoffeController.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.added_view_alphabetical.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.otherViews.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.views_and_coffeBarsListMethods.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodelaccview.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodels2.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.promena.resources
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC APP.csproj.GenerateResource.cache
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC APP.csproj.CopyComplete
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC APP.dll
+C:\Users\Snezana\Documents\GitHub\MVC APP\MVC APP\obj\Debug\MVC APP.pdb
