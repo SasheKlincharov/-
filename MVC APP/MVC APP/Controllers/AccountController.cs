@@ -24,7 +24,19 @@ namespace MVC_APP.Controllers
         public AccountController()
         {
         }
+  
+        public ActionResult DeleteFromFavourites(int id)
+        {
+            var user = dbContext.Users.Find(User.Identity.GetUserId());
+            var bar = dbContext.Bars.Find(id);
 
+            user.FavouriteBars.Remove(bar);
+            user.NumberOfFavouriteBars = user.NumberOfFavouriteBars - 1;
+
+            dbContext.SaveChanges();
+            return RedirectToAction("FavouriteBars");
+            
+        }
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;

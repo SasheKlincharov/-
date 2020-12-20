@@ -6,7 +6,7 @@
     ViewBag.Title = "Favourites";
 }
 
-<table>
+<table id="barsTable">
     <tr>
         <td>
 
@@ -27,8 +27,7 @@
                     {
                         <li>
                             <a style="color:black;font-size:25px" href="~/CoffeBar/Details/@b.Id">@b.Name</a>
-
-                            <button data-id="@b.Id" class="btn btn-danger">Remove from favourites</button>
+                            <a class="btn btn-danger" href="~/Account/DeleteFromFavourites/@b.Id"> Remove from favourites</a>            
                         </li>
                     }
                 }
@@ -39,16 +38,9 @@
         </td>
 
 
-            </tr>
+    </tr>
 </table>
 
 @section Styles {
     <link href="@Url.Content("~/Scripts/sortedStyle.css")" rel="stylesheet" type="text/css" />
-}
-
-@section Scripts{
-    <script>
-        var search = $(".searchBox");
-
-    </script>
 }
