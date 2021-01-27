@@ -1,0 +1,42 @@
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\MVC APP.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Optimization.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Mvc.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Owin.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Http.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\EntityFramework.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.WebPages.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Razor.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\MVC APP.pdb
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\MVC APP.dll.config
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Optimization.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Mvc.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Http.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\EntityFramework.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.WebPages.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.Razor.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\Damchevski\Desktop\APP FINAL\Project-for-DIANS\MVC APP\obj\Debug\docker-compose.dcproj.CopyComplete

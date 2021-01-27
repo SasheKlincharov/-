@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@* <img style=" border:2px solid gray; height:150px; width:100%;"class="cover_img" src="~/images/Cover.jpg" />*@
+
+<div class="jumbotron" style="border: 2px solid gray; border-top:none; 100%; padding-left: 200px;">
+    <table class="table-condensed">
+        <tr style="text-align:center;">
+            <td style="padding-right:120px;"><a style="text-decoration:none; color:gray;" href="~/CoffeBar/AlphabeticalSort"><img style="height:150px; width:150px;" src="~/images/alphabetical.png" /><span style=" font-family:Verdana; font-size:15px;">alphabetical sort coffee bars</span></a></td>
+            <td style="padding-right:120px;"><a style="text-decoration:none; color:gray;" href="~/CoffeBar/DistanceSort"><img style="height:150px; width:150px;" src="~/images/distance.png" /><span style=" font-family:Verdana; font-size:15px;">distance sort coffee bars</span></a></td>
+            <td style="padding-right:120px;"><a style="text-decoration:none; color:gray;" href="~/CoffeBar/RatingSort"><img style="height:150px; width:150px;" src="~/images/rating.png" /><span style=" font-family:Verdana; font-size:15px;">rating sort coffee bars</span></a></td>
+        </tr>
+    </table>
+
+    <br />
+    <table class="table-condensed">
+        <tr style="text-align:center;">
+            <td style="padding-right:120px;"><a style="text-decoration:none; color:gray;" href="~/Account/FavouriteBars"><img style="height:150px; width:150px;" src="~/images/favourites.png" /><span style=" font-family:Verdana; font-size:15px;">favourites coffee bars</span></a></td>
+            <td class="searchHome" style="cursor:pointer; padding-right:120px;"><a style="text-decoration:none; color:gray;"><img style="height:150px; width:150px;" src="~/images/search.png" /><span style=" font-family:Verdana; font-size:15px;">search by name</span></a></td>
+            <td class="searchAdjust" style="cursor:pointer; padding-right:120px;"><a style="text-decoration:none; color:gray;"><img style="height:150px; width:150px;" src="~/images/adjust.png" /><span style=" font-family:Verdana; font-size:15px;">adjust(search by distance)</span></a></td>
+        </tr>
+    </table>
+
+</div>
+
+@section Scripts{
+    <script>
+        var search = $(".searchHome");
+        search.click(function () {
+            bootbox.prompt("Search",
+                function (result) {
+                    window.location.href = '@Url.Action("SearchByName", "CoffeBar")/' + result;
+                });
+
+        });
+
+         var search = $(".searchAdjust");
+        search.click(function () {
+            bootbox.prompt("Search",
+                function (result) {
+                    window.location.href = '@Url.Action("SearchByDistance", "CoffeBar")/' + result;
+                });
+
+        });
+    </script>
+}
+  

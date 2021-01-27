@@ -196,6 +196,8 @@ namespace MVC_APP.Controllers
                 if (b.Distance <= (float)id)
                     all_bars.Add(b);
             }
+            DistanceComparer comparer = new DistanceComparer();
+            all_bars.Sort(comparer);
 
             return View("Index", all_bars);
         }
