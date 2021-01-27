@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<table>
+<table id="bars_table">
     <tr>
         <td>
             <div class="jumbotron">
@@ -25,7 +25,6 @@
     </tr>
     <tr>
         <td>
-
         </td>
         <td>
             <ul style="margin-top:-450px;">
@@ -40,21 +39,21 @@
                         if (!b.Name.Equals("SEARCH DISTANCE RESULT") && !b.Name.Equals("SEARCH NAME RESULT"))
                         {
 
-                            <li style="display:flex; align-items:center">
-                                <img src="@b.ImageUrl" />
-                                <a style="color:black;font-size:25px;margin:30px;" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
-                                <h3 style="margin:30px">Rating: @b.Rating⭐ out of 5⭐</h3>
-                                <h3 style="margin:30px">Distance(to center): @b.Distance m</h3>
-                                <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@b.Id">Favourite</a></button>
-                                <br /><br />
-                                @{
-                                    if (User.IsInRole("Admin"))
-                                    {
-                                        @Html.ActionLink(" Edit", "Edit", new { id = b.Id })
-                                        @Html.ActionLink("  Delete", "Delete", new { id = b.Id })
-                                    }
-                                }
-                            </li>
+            <li style="display:flex; align-items:center">
+                <img src="@b.ImageUrl" />
+                <a style="color:black;font-size:25px;margin:30px;" href="~/CoffeBar/Details/@b.Id">Name: @b.Name</a>
+                <h3 style="margin:30px">Rating: @b.Rating⭐ out of 5⭐</h3>
+                <h3 style="margin:30px">Distance(to center): @b.Distance m</h3>
+                <button class="btn btn-default"><a style="color:black;" href="~/Account/AddToFavourites/@b.Id">Favourite</a></button>
+                <br /><br />
+                @{
+                    if (User.IsInRole("Admin"))
+                    {
+                        @Html.ActionLink(" Edit", "Edit", new { id = b.Id })
+                        <button id="delete_button" bar-id="@b.Id">Delete</button>
+                    }
+                }
+            </li>
 
                         }
                         <hr />
@@ -93,5 +92,24 @@
                 });
 
         });
+
+        $(document).ready(function () {
+            var table = $("#bars_table");
+            $("#bars_table #delete_button").on("click", function () {
+                var button = $(this);
+                bootbox.confirm("Do you want to delete this bar?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/CoffeeBars/" + button.attr("bar-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("li")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
     </script>
 }
