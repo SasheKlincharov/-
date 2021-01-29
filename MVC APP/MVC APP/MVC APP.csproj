@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -50,10 +51,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.UserSecrets, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -251,6 +260,127 @@
     </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\app.publish\App_Data\aspnet-MVC APP-20201212060428.mdf" />
+    <Content Include="bin\app.publish\App_Data\aspnet-MVC APP-20201212060428_log.ldf">
+      <DependentUpon>aspnet-MVC APP-20201212060428.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\app.publish\bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\app.publish\bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\app.publish\bin\EntityFramework.dll" />
+    <Content Include="bin\app.publish\bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\app.publish\bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\app.publish\bin\MVC APP.dll" />
+    <Content Include="bin\app.publish\bin\MVC APP.pdb" />
+    <Content Include="bin\app.publish\bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\app.publish\bin\Owin.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\csc.exe" />
+    <Content Include="bin\app.publish\bin\roslyn\csi.exe" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Console.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\app.publish\bin\roslyn\vbc.exe" />
+    <Content Include="bin\app.publish\bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\app.publish\bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.Helpers.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.Http.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.Mvc.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.Optimization.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.Razor.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.WebPages.dll" />
+    <Content Include="bin\app.publish\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\app.publish\bin\WebGrease.dll" />
+    <Content Include="bin\app.publish\Content\bootstrap-theme.css" />
+    <Content Include="bin\app.publish\Content\bootstrap-theme.min.css" />
+    <Content Include="bin\app.publish\Content\bootstrap.css" />
+    <Content Include="bin\app.publish\Content\bootstrap.min.css" />
+    <Content Include="bin\app.publish\Content\Site.css" />
+    <Content Include="bin\app.publish\data\readdata.txt" />
+    <Content Include="bin\app.publish\favicon.ico" />
+    <Content Include="bin\app.publish\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bin\app.publish\Global.asax" />
+    <Content Include="bin\app.publish\images\adjust.png" />
+    <Content Include="bin\app.publish\images\alphabetical.png" />
+    <Content Include="bin\app.publish\images\Cover.jpg" />
+    <Content Include="bin\app.publish\images\distance.png" />
+    <Content Include="bin\app.publish\images\favourites.png" />
+    <Content Include="bin\app.publish\images\home.jpg" />
+    <Content Include="bin\app.publish\images\rating.png" />
+    <Content Include="bin\app.publish\images\search.png" />
+    <Content Include="bin\app.publish\images\x.png" />
+    <Content Include="bin\app.publish\Img\1-04-512.png" />
+    <Content Include="bin\app.publish\Img\122646-200.png" />
+    <Content Include="bin\app.publish\Img\171-512.png" />
+    <Content Include="bin\app.publish\Img\585e4ad1cb11b227491c3391.png" />
+    <Content Include="bin\app.publish\Img\95-512.png" />
+    <Content Include="bin\app.publish\Img\adjust-icon.png" />
+    <Content Include="bin\app.publish\Img\b36ff86fd6a8561d0f67216c947a4c08.png" />
+    <Content Include="bin\app.publish\Img\email-icon.png" />
+    <Content Include="bin\app.publish\Img\Home-512.png" />
+    <Content Include="bin\app.publish\Img\key-pass.png" />
+    <Content Include="bin\app.publish\Img\Location-Color-34-512.png" />
+    <Content Include="bin\app.publish\Img\myacc.png" />
+    <Content Include="bin\app.publish\Img\settings-gear-mechanics-preferences-option-config-configuration-23369.png" />
+    <Content Include="bin\app.publish\Img\settings-icon.png" />
+    <Content Include="bin\app.publish\Img\unnamed.jpg" />
+    <Content Include="bin\app.publish\Scripts\bootstrap.js" />
+    <Content Include="bin\app.publish\Scripts\bootstrap.min.js" />
+    <Content Include="bin\app.publish\Scripts\jquery-3.4.1.js" />
+    <Content Include="bin\app.publish\Scripts\jquery-3.4.1.min.js" />
+    <Content Include="bin\app.publish\Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="bin\app.publish\Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="bin\app.publish\Scripts\jquery.validate.js" />
+    <Content Include="bin\app.publish\Scripts\jquery.validate.min.js" />
+    <Content Include="bin\app.publish\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="bin\app.publish\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="bin\app.publish\Scripts\modernizr-2.8.3.js" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="bin\EntityFramework.SqlServer.xml" />
@@ -393,6 +523,68 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="data\readdata.csv" />
     <Content Include="obj\Release\MVC APP.csprojAssemblyReference.cache" />
+    <Content Include="bin\app.publish\.vs\MVC APP\v16\.suo" />
+    <Content Include="bin\app.publish\.vs\ProjectSettings.json" />
+    <Content Include="bin\app.publish\.vs\slnx.sqlite" />
+    <Content Include="bin\app.publish\.vs\VSWorkspaceState.json" />
+    <Content Include="bin\app.publish\bin\MVC APP.dll.config" />
+    <Content Include="bin\app.publish\bin\roslyn\csc.exe.config" />
+    <Content Include="bin\app.publish\bin\roslyn\csc.rsp" />
+    <Content Include="bin\app.publish\bin\roslyn\csi.exe.config" />
+    <Content Include="bin\app.publish\bin\roslyn\csi.rsp" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\app.publish\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\app.publish\bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\app.publish\bin\roslyn\vbc.rsp" />
+    <Content Include="bin\app.publish\bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\app.publish\Content\bootstrap-theme.css.map" />
+    <Content Include="bin\app.publish\Content\bootstrap-theme.min.css.map" />
+    <Content Include="bin\app.publish\Content\bootstrap.css.map" />
+    <Content Include="bin\app.publish\Content\bootstrap.min.css.map" />
+    <Content Include="bin\app.publish\data\readdata.csv" />
+    <Content Include="bin\app.publish\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bin\app.publish\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bin\app.publish\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bin\app.publish\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bin\app.publish\Scripts\jquery-3.4.1.min.map" />
+    <Content Include="bin\app.publish\Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="bin\app.publish\Views\Account\AddToFavourites.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\AlredyInFavourites.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\FavouriteBars.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ForgotPassword.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\Login.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\Register.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ResetPassword.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\SendCode.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\VerifyCode.cshtml" />
+    <Content Include="bin\app.publish\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="bin\app.publish\Views\CoffeBar\Create.cshtml" />
+    <Content Include="bin\app.publish\Views\CoffeBar\Delete.cshtml" />
+    <Content Include="bin\app.publish\Views\CoffeBar\Details.cshtml" />
+    <Content Include="bin\app.publish\Views\CoffeBar\Edit.cshtml" />
+    <Content Include="bin\app.publish\Views\CoffeBar\Index.cshtml" />
+    <Content Include="bin\app.publish\Views\Home\About.cshtml" />
+    <Content Include="bin\app.publish\Views\Home\Contact.cshtml" />
+    <Content Include="bin\app.publish\Views\Home\Index.cshtml" />
+    <Content Include="bin\app.publish\Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="bin\app.publish\Views\Manage\ChangePassword.cshtml" />
+    <Content Include="bin\app.publish\Views\Manage\Index.cshtml" />
+    <Content Include="bin\app.publish\Views\Manage\ManageLogins.cshtml" />
+    <Content Include="bin\app.publish\Views\Manage\SetPassword.cshtml" />
+    <Content Include="bin\app.publish\Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="bin\app.publish\Views\Shared\Error.cshtml" />
+    <Content Include="bin\app.publish\Views\Shared\Lockout.cshtml" />
+    <Content Include="bin\app.publish\Views\Shared\_Layout.cshtml" />
+    <Content Include="bin\app.publish\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="bin\app.publish\Views\Web.config" />
+    <Content Include="bin\app.publish\Views\_ViewStart.cshtml" />
+    <Content Include="bin\app.publish\Web.config" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -535,8 +727,11 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.10.9\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
